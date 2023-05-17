@@ -1,7 +1,5 @@
-grpcio==1.26.0rc1
-tensorflow
-opencv-python
-numpy
-scikit-learn
-joblib
-pathlib
+joblib==1.2.0
+numpy==1.23.5
+opencv_python==4.7.0.72
+scikit_learn==1.2.1
+tensorflow==2.11.0
