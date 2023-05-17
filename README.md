@@ -11,7 +11,7 @@
 ## Description <a name="description"></a>
 This repository includes the solution by *Anton Drasbæk Schiønning (202008161)* to assignment 2 in the course "Visual Analytics" at Aarhus University.
 
-It is used to create classifications on the [Cifar10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html) which contains 60,000 images spread across 10 classes. These pictures are being preprocessed and then classified by applying both a logistic regression and a neutral network on the task.
+It is used to create classifications on the [Cifar10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html) which contains 60,000 images spread across 10 classes. These pictures are being preprocessed and then classified by applying both a logistic regression and a neural network on the task.
 
 ## Repository Tree <a name="tree"></a>
 
