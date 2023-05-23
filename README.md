@@ -64,6 +64,7 @@ The data can then be processed by running the preprocessing script:
 ```
 python src/preprocess.py
 ```
+From this, you should see the file `cifar10_preprocessed.npz` in the `data` directory.
 <br>
 
 After having preprocessed the data, the classification can be done. In general, this analysis is setup to utilize grid search with cross-validation to optimize model parameters for the various classification types. <br>
@@ -77,21 +78,22 @@ python src/classify.py --classifier logistic
 python src/classify.py -classifier neural
 ```
 <br>
-In addition, you can easily add other classification types by simply adding them in `model_space.py` following the same format as for the current models. To demonstrate this flexibility, a RandomForest classifier is already in the model space and could be used in the analysis as such:
+
+In addition, you can easily add other classification types by simply adding them in `model_space.py` following the same format as for the current models. To demonstrate this flexibility, a *RandomForest* classifier is already in the model space and could be used in the analysis as such:
 
 ```
 # run both logistic regression, neural network and random forest classifiers
 python src/classify.py -c logistic neural random_forest
 ```
 
-This would create additional outputs for RandomForest, named accordingly, and found in the `out` and `model` directories.
+This would create additional outputs for *RandomForest*, named accordingly, and found in the `out` and `model` directories.
 </br></br>
 
 ## Results <a name="results"></a>
 The following results are for the best performing logistic regression and neural network classifiers within the defined parameter space used in the grid search.
 
 ### Logistic Regression Classifier
-Parameters: `{'C': 0.01, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'saga', 'tol': 0.01}`
+Best parameters: `{'C': 0.01, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver': 'saga', 'tol': 0.01}`
 ```
 |            | Precision | Recall | F1-score | Support |
 |------------|-----------|--------|----------|---------|
@@ -112,7 +114,7 @@ Parameters: `{'C': 0.01, 'multi_class': 'multinomial', 'penalty': 'l2', 'solver'
 <br>
 
 ### Neural Network (MLP) Classifier
-Parameters: `{'early_stopping': True, 'hidden_layer_sizes': (512, 128, 32), 'learning_rate': 'adaptive'}`
+Best parameters: `{'early_stopping': True, 'hidden_layer_sizes': (512, 128, 32), 'learning_rate': 'adaptive'}`
 ```
 |            | Precision | Recall | F1-score | Support |
 |------------|-----------|--------|----------|---------|
